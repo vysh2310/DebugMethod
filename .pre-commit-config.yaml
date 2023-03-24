@@ -7,8 +7,8 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
-  - repo: local
-    hooks:
+  - repo: https://github.com/vysh2310/DebugMethod.git
+      hooks:
     -   id: build-and-analyse-with-polyspace
         name: build-and-analyse-with-polyspace
         entry: sh -x build_script.sh
