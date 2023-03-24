@@ -4,8 +4,8 @@
   <standard name="Bug Finder Findings" state="off"/>
   <standard name="MISRA C:2004" state="off"/>
   <standard name="MISRA AC AGC" state="off"/>
-  <standard name="MISRA C:2012" state="off"/>
-  <standard name="MISRA C++:2008" state="on"/>
+  <standard name="MISRA C:2012" state="on"/>
+  <standard name="MISRA C++:2008" state="off"/>
   <standard name="JSF AV C++" state="off"/>
   <standard name="SEI CERT C" state="off"/>
   <standard name="SEI CERT C++" state="off"/>
