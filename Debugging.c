@@ -13,5 +13,6 @@ double debugging_a_bug()
 
 int main()
 {
+  int k =0;
   debugging_a_bug();
 }
