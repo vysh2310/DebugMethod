@@ -10,3 +10,8 @@ double debugging_a_bug()
 
   return 100/divisor;
 }
+
+int main()
+{
+  debugging_a_bug();
+}
