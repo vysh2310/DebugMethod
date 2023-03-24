@@ -1,6 +1,8 @@
 fail_fast: false
 repos:
-  - repo: https://github.com/vysh2310/DebugMethod.git 
+   - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
