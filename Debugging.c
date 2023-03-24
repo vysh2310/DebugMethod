@@ -7,7 +7,7 @@ double debugging_a_bug()
     {
       divisor = a;
     }
-
+a++;
   return 100/divisor;
 }
 
