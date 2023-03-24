@@ -6,13 +6,13 @@
 files=$(git status --porcelain)
 mkdir temp_analysis_result
 for file in $files; do
-	if [[ $file == *.cpp ]]; then
+	if [[ $file == *.c]]; then
 
 		# Bug finder analysis
 	    echo "---- Analysing $file"
 		"C:/Program Files/Polyspace as You Code/R2023a/polyspace/bin/polyspace-bug-finder-access" \
 		-sources "../$file" \
-		-misra-cpp all-rules \		
+		-misra3 all-rules \		
 		-results-dir "$(pwd)/temp_analysis_result/_$file"
 		echo "---- Analysis complete"
 
