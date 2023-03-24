@@ -1,6 +1,6 @@
 double debugging_a_bug()
 {
-  char a = 3;
+  char a = 4;
   unsigned int divisor = 0;
 
     if(a<0u)
