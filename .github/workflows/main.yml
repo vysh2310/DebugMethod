@@ -3,7 +3,7 @@ on: [push]
 env:
   PRJNAME: DebugMethodGit
   RESULTS_DIR: results
-  ACCESS_HOST: http://gnb-as04-deb.gnb.mathworks.com
+  ACCESS_HOST: gnb-as04-deb.mathworks.com
   ACCESS_PATH: "/public/DebugMethodGit"
   ACCESS_PASS: JDAJJPFAEMJFIKNGDNINHFPGKDGBDPLD
  
