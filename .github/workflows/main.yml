@@ -22,9 +22,9 @@ jobs:
     - name: Run analysis
       run: |
         echo "Running Polyspace analysis..."
-         C:\Program Files\Polyspace_Server\R2023a\polyspace\bin\polyspace-bug-finder-server.exe -sources C:\DebugGit\DebugMethod\Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
+        polyspace-code-prover-server -sources C:\DebugGit\DebugMethod\Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
         echo "This job's status is done"
-        C:\Program Files\Polyspace_Server\R2023a\polyspace\bin\polyspace-results-export.exe -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
+        polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
     - name: Upload to Polypace Access Dashboard
       run: |
         echo "Uploading Polyspace analysis..."
