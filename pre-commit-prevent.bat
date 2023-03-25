@@ -1,5 +1,5 @@
-@echo off
 
+ 
 setlocal enableextensions
 set "prohibited_words=Defect"
 
@@ -15,5 +15,5 @@ for %%f in (%*) do (
         )
     )
 )
-
+echo "Detected Polyspace violations, do not commit"
 exit /b 0
