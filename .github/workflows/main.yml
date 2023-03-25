@@ -28,5 +28,5 @@ jobs:
     - name: Upload to Polypace Access Dashboard
       run: |
         echo "Uploading Polyspace analysis..."
-        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login jenkins -encrypted-password ${{ env.ACCESS_PASS }} -create-project ${{ env.ACCESS_PATH }}
-        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login jenkins -encrypted-password ${{ env.ACCESS_PASS }} -upload ${{ env.RESULTS_DIR }} -parent-project ${{ env.ACCESS_PATH }} -project ${{ env.PRJNAME }}
+        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -create-project ${{ env.ACCESS_PATH }}
+        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -upload ${{ env.RESULTS_DIR }} -parent-project ${{ env.ACCESS_PATH }} -project ${{ env.PRJNAME }}
