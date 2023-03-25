@@ -22,7 +22,7 @@ jobs:
     - name: Run analysis
       run: |
         echo "Running Polyspace analysis..."
-        polyspace-bug-finder -sources Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
+        polyspace-bug-finder-server -sources Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
         echo "This job's status is done"
          polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
     - name: Upload to Polypace Access Dashboard
