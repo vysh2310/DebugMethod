@@ -15,14 +15,14 @@ jobs:
       uses: actions/checkout@v2
     - name: Ensure Env
       run: |
-        echo "PATH=C:/Program Files/Polyspace/Polyspace_Server/R2023a/polyspace/bin:$PATH" >> $GITHUB_ENV
+        echo "PATH=C:/Program Files/Polyspace/R2023a/polyspace/bin:$PATH" >> $GITHUB_ENV
         echo "The job was automatically triggered by a ${{ github.event_name }} event."
         echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
         echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."  
     - name: Run analysis
       run: |
         echo "Running Polyspace analysis..."
-        polyspace-bug-finder-server.exe -sources C:/DebugGit/DebugMethod/Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
+        polyspace-bug-finder.exe -sources C:/DebugGit/DebugMethod/Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
         echo "This job's status is done"
         polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
         
@@ -43,5 +43,5 @@ jobs:
     - name: Upload to Polypace Access Dashboard
       run: |
         echo "Uploading Polyspace analysis..."
-        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -create-project ${{ env.ACCESS_PATH }}
-        polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -upload ${{ env.RESULTS_DIR }} -parent-project ${{ env.ACCESS_PATH }} -project ${{ env.PRJNAME }}
+        #polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -create-project ${{ env.ACCESS_PATH }}
+        #polyspace-access -protocol http -host ${{ env.ACCESS_HOST }} -port 9443 -login vhanumap -encrypted-password ${{ env.ACCESS_PASS }} -upload ${{ env.RESULTS_DIR }} -parent-project ${{ env.ACCESS_PATH }} -project ${{ env.PRJNAME }}
