@@ -37,7 +37,7 @@ jobs:
           body: 'The GitHub Actions workflow has completed successfully and has found defects'
           to: vhanumap@mathworks.com
           from: vhanumap@mathworks.com
-          attachment_path: ${{ github.workspace }}/actions-runner/${{ env.PRJNAME }}.csv
+          attachments: ${{ github.workspace }}/actions-runner/${{ env.PRJNAME }}.csv
           
     - name: Upload to Polypace Access Dashboard
       run: |
