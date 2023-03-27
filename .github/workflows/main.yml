@@ -15,14 +15,14 @@ jobs:
       uses: actions/checkout@v2
     - name: Ensure Env
       run: |
-        echo "PATH=C:/Program Files/Polyspace/R2023a/polyspace/bin:$PATH" >> $GITHUB_ENV
+        echo "PATH=C:/Program Files/Polyspace_Server/R2022b/polyspace/bin:$PATH" >> $GITHUB_ENV
         echo "The job was automatically triggered by a ${{ github.event_name }} event."
         echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
         echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."  
     - name: Run analysis
       run: |
         echo "Running Polyspace analysis..."
-        polyspace-bug-finder -sources C:/DebugGit/DebugMethod/Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
+        polyspace-bug-finder-server -sources C:/DebugGit/DebugMethod/Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
         echo "This job's status is done"
         polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
         
@@ -33,8 +33,8 @@ jobs:
           server_port: 25
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          subject: Workflow Completed
-          body: 'The GitHub Actions workflow has completed successfully and has found defects after Polyspace Analysis'
+          subject: Polyspace Analysis Workflow Completed
+          body: '<p>The GitHub Actions workflow has completed successfully and has found defects after Polyspace Analysis.Click to view results on Polyspace Dashboard <a href="http://psaccessp00gnb.mathworks.com">here</a> Polyspace Access.</p>'
           to: vhanumap@mathworks.com
           from: vhanumap@mathworks.com
           attachments: ${{ github.workspace }}/${{ env.PRJNAME }}.csv
