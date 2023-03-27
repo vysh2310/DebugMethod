@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: Workflow Completed
-          body: 'The GitHub Actions workflow has completed successfully and has found defects'
+          body: 'The GitHub Actions workflow has completed successfully and has found defects after Polyspace Analysis'
           to: vhanumap@mathworks.com
           from: vhanumap@mathworks.com
           attachments: ${{ github.workspace }}/actions-runner/${{ env.PRJNAME }}.csv
