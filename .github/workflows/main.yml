@@ -28,9 +28,9 @@ jobs:
         echo "This job's status is done"
         polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
         
-         - name: Send Email Notification
-         run: |
-         echo "Sending email Polyspace analysis..."
+    - name: Send Email Notification
+      run: |
+        echo "Sending email Polyspace analysis..."
         uses: dawidd6/action-send-mail@v2
         with:
           server_address: mail.mathworks.com
@@ -42,6 +42,7 @@ jobs:
           to: vhanumap@example.com
           from: vhanumap@example.com
           attachment_path: '${{ env.PRJNAME }}.csv'
+          
     - name: Upload to Polypace Access Dashboard
       run: |
         echo "Uploading Polyspace analysis..."
