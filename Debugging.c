@@ -15,5 +15,6 @@ double debugging_a_bug()
 //Function corrected and final merge
 int main()
 {
+  
 debugging_a_bug();
 }
