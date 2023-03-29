@@ -9,7 +9,7 @@ double debugging_a_bug()
       divisor = a;
     }
 
-  return 100/divisor;
+  return 20/divisor;
 }
 
 int main()
