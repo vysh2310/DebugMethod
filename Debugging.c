@@ -14,6 +14,5 @@ double debugging_a_bug()
 
 int main()
 {
-
-  debugging_a_bug();
+debugging_a_bug();  
 }
