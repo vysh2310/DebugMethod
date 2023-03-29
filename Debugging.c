@@ -12,7 +12,7 @@ double debugging_a_bug()
 
   return divisor;
 }
-//Function corrected and final commit
+//Function corrected and final commits
 int main()
 {
   
