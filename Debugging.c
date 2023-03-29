@@ -11,7 +11,7 @@ double debugging_a_bug()
 
   return 20/divisor;
 }
-
+//Function to debug a code
 int main()
 {
 debugging_a_bug();
