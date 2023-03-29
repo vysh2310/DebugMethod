@@ -21,7 +21,7 @@ jobs:
         echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."  
     - name: Run analysis
       run: |
-        echo "Running Polyspace analysis..."
+        echo "Running Polyspace analysis...."
         polyspace-bug-finder.exe -sources C:/DebugGit/DebugMethod/Debugging.c -misra3 all -checkers all -results-dir ${{ env.RESULTS_DIR }}   
         echo "This job's status is done"
         polyspace-results-export -format csv -results-dir ${{ env.RESULTS_DIR }}  -output-name ${{ env.PRJNAME }}.csv
