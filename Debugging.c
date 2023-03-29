@@ -2,15 +2,14 @@ double debugging_a_bug()
 {
   char a = -1;
   
-  char divisor = 0;
+  unsigned int divisor = 0;
 
-    while(a<0)
+    int(a<0u)
     {
       divisor = a;
-      a++;
     }
 
-  return 105/divisor;
+  return 20/divisor;
 }
 
 int main()
