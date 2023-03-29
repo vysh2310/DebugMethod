@@ -2,16 +2,17 @@ double debugging_a_bug()
 {
   char a = -1;
   
-  unsigned int divisor = 0;
+  char divisor = 0;
 
-    int(a<0u)
+    while(a<0)
     {
       divisor = a;
+      a++;
     }
 
-  return 20/divisor;
+  return divisor;
 }
-//Function to debug a code
+//Function corrected
 int main()
 {
 debugging_a_bug();
