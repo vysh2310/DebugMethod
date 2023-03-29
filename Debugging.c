@@ -12,7 +12,7 @@ double debugging_a_bug()
 
   return divisor;
 }
-//Function corrected
+//Function corrected and final merge
 int main()
 {
 debugging_a_bug();
