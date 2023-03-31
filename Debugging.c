@@ -12,7 +12,7 @@ double debugging_a_bug()
 
   return divisor;
 }
-//Function complete and correct
+//Corrected the debugging_a_bug() function
 int main()
 {  
 debugging_a_bug();
