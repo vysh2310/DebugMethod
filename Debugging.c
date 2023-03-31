@@ -12,9 +12,8 @@ double debugging_a_bug()
 
   return divisor;
 }
-//Function corrected with final changes
+//Function complete and correct
 int main()
-{
-  
+{  
 debugging_a_bug();
 }
