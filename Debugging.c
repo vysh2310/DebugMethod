@@ -2,9 +2,9 @@ double debugging_a_bug()
 {
   char a = -1;
   
-  char divisor = 0;
+  unsigned int divisor = 0;
 
-    if(a<0)
+    if(a<0u)
     {
       divisor = a;      
     }
