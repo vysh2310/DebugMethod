@@ -4,10 +4,9 @@ double debugging_a_bug()
   
   char divisor = 0;
 
-    while(a<0)
+    if(a<0)
     {
-      divisor = a;
-      a++;
+      divisor = a;      
     }
 
   return divisor;
