@@ -11,7 +11,7 @@ double debugging_a_bug()
 
   return 100/divisor;
 }
-//Corrected the debugging_a_bug() function
+
 int main()
 {  
 debugging_a_bug();
